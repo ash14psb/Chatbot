@@ -153,6 +153,10 @@ app.put("/api/chats/:id", async (req, res) => {
   }
 });
 
+app.get("/", (req, res) => {
+  res.send("Hello Lama Ai Server");
+});
+
 // Start the server and connect to MongoDB
 app.listen(port, () => {
   connect();
