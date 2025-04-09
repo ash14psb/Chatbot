@@ -146,13 +146,11 @@ app.put("/api/chats/:id", async (req, res) => {
   }
 });
 
-<<<<<<< HEAD
 app.get("/", (req, res) => {
   res.send("Hello Lama Ai Server");
 });
 
 // Start the server and connect to MongoDB
-=======
 // Fetch all users (new route)
 app.get("/api/users", async (req, res) => {
   try {
@@ -165,7 +163,6 @@ app.get("/api/users", async (req, res) => {
 });
 
 // Start the server
->>>>>>> 964eec64a633b3a9c94e5ba739b1b2b4bd340494
 app.listen(port, () => {
   connect();
   console.log(`Server running on port ${port}`);
