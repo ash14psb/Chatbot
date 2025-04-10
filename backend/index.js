@@ -5,6 +5,7 @@ import dotenv from "dotenv";
 import ImageKit from "imagekit";
 import { ObjectId } from "mongodb";
 
+
 import Chat from "./models/chat.js";
 import UserChats from "./models/userChats.js";
 import User from "./models/User.js";
@@ -28,6 +29,7 @@ app.use(
   })
 );
 app.use(express.json());
+
 
 // MongoDB connection
 const connect = async () => {
@@ -62,6 +64,7 @@ app.post("/api/upload", (req, res) => {
 
 // Firebase protected routes
 app.use("/api", verifyFirebaseToken);
+
 
 // --- Chat Routes ---
 app.post("/api/chats", async (req, res) => {

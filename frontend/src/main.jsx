@@ -11,6 +11,7 @@ import SignUpPage from "./routes/signUpPage/signUpPage";
 import "react-toastify/dist/ReactToastify.css";
 import { QueryClient, QueryClientProvider} from "@tanstack/react-query";
 import AuthProvider from "./Providers/AuthProvider";
+import SignInPage from "./routes/signInPage/signInPage";
 
 const router = createBrowserRouter([
   {
@@ -24,6 +25,10 @@ const router = createBrowserRouter([
       {
         path: "/sign-up",
         element: <SignUpPage />,
+      },
+      {
+        path: "/sign-in",
+        element: <SignInPage />,
       },
       {
         element: <DashboardLayout />,
